@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon"  type="image/png" sizes="500x500" href="img/icon-152x152.png"> -->
+    <title>Ana Rafhina</title>
+    <meta name="title" content="Ana Rafhina AppShell">
+   
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="manifest" href="manifest.json" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css"
+    />
+     <link rel="stylesheet" href="assets/style.css" />
+    <script defer src="assets/js/material.min.js"></script>
+    <script src="app.js" type="module"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+            .then(function (registration) {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(function (error) {
+              console.error('Service Worker registration failed:', error);
+            });
+        }
+    </script>
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- ios support -->
+    
+</head>
+
+<body> 
+
+    <div class="container-fluid">
+        <!-- <main id="app-shell"> -->
+            <div id="app">
+                <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+                    <header class="mdl-layout__header">
+                    <div class="mdl-layout__header-row">
+                        <!-- Title -->
+                        <span class="mdl-layout-title">PWA - AppShell</span>
+                    </div>
+                    </header>
+                    <div class="mdl-layout__drawer">
+                    <span class="mdl-layout-title">PWA - Ana Rafhina</span>
+                    <nav class="mdl-navigation">
+                        <a class="mdl-navigation__link" href="index.html">Beranda</a>
+                        <a class="mdl-navigation__link" href="page2.html">IndexDB</a>
+                        <a class="mdl-navigation__link" href="page3.html">Portofolio</a>
+                    </nav>
+                    </div>
+                    <main class="mdl-layout__content mat-typography" style="text-align: center">
+                    <p id="output">
+                        <img src="assets/images/pwa-logo.png" alt="" />
+                    </p>
+                    <h3>Push Notifikasi PWA</h3>
+                    <h4>Token:</h4>
+                    <!-- <p class ="message"></p> -->
+                    <p id="app-shell"></p>
+                    </main>
+                </div>
+            </div>
+            <!-- Content will be dynamically loaded here -->
+        <!-- </main> -->
+    </div>
+    <!-- <footer>
+        <p>&copy; 2023 PWA App Shell</p>
+    </footer> -->
+
+
+   
+    <script src="app.js"></script>
+    
+
+</body>
+</html>
+
+
